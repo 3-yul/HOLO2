@@ -24,3 +24,5 @@ google-services.json
 # 기타 임시 파일
 /log
 *.log
+
+local.properties
