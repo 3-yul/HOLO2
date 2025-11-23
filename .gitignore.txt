@@ -1,0 +1,26 @@
+# 빌드 결과물 (가장 중요)
+/build
+/app/build
+.gradle/
+/out
+
+# 로컬 설정 (개인 PC 경로 포함되므로 제외 필수)
+local.properties
+
+# 안드로이드 스튜디오 설정 파일
+.idea/
+*.iml
+*.ide
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+
+# 구글 서비스 및 키 파일 (보안상 절대 올리면 안 됨)
+google-services.json
+*.jks
+*.keystore
+
+# 기타 임시 파일
+/log
+*.log
