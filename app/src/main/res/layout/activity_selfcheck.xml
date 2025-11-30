@@ -11,13 +11,13 @@
         android:id="@+id/view4"
         android:layout_width="wrap_content"
         android:layout_height="119dp"
+        android:background="#F06060"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:background="#afd485"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView5"
@@ -33,17 +33,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:text="낙상 안전\n1.집에 어질러진 전선들이 정리되었나요?\n2.욕실에 미끄럼 방지 페드가 있나요?\n3.욕실을 제외한 곳의 문턱(문지방)을 제거했나요?\n 전기 안전\n4.전선을 물에서 멀리 떨어트려놓았나요?\n5.콘센트에 뚜껑을 설치하였나요?\n6.전선의 코팅이 멀쩡한가요?\n가구 안전\n7.뾰족한 가구의 모서리에 고무 패트를 붙혀놓았나요?\n8.문틈에 스티로폼 보호 스티커가 있나요?\n9:"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
 </androidx.constraintlayout.widget.ConstraintLayout>
