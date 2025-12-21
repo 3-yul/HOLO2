@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">H.O.L.O</string>
+    <string name="alarm_button">알람버튼</string>
 </resources>

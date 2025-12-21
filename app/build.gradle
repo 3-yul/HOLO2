@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.example.holo'
-    compileSdk 35
+    compileSdk 34 // targetSdk와 일치시킴
 
     defaultConfig {
         applicationId "com.example.holo"
@@ -29,7 +29,6 @@ android {
 }
 
 dependencies {
-
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity

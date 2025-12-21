@@ -9,108 +9,193 @@
     tools:context=".MainActivity"
     android:background="#FFFFFF">
 
-    <Button
-        android:id="@+id/button_settings"
-        android:layout_width="70dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/ic_settings"
-        app:layout_constraintBottom_toBottomOf="@+id/view8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 상단 헤더 배경 -->
+
+    <!-- H.O.L.O. 타이틀 -->
 
     <View
-        android:id="@+id/view8"
+        android:id="@+id/view_header_background"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:background="#F06060"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:letterSpacing="0.05"
         android:text="H.O.L.O."
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/view8"
-        app:layout_constraintBottom_toBottomOf="@id/view8"
-        app:layout_constraintStart_toStartOf="@id/view8"
-        app:layout_constraintEnd_toEndOf="@id/view8"/>
+        app:layout_constraintBottom_toBottomOf="@id/view_header_background"
+        app:layout_constraintEnd_toStartOf="@id/button_settings"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_header_background"
+        app:layout_constraintVertical_bias="0.6" />
 
     <Button
-        android:id="@+id/button_main_top"
-        android:layout_width="420dp"
-        android:layout_height="145dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/boox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view8" />
+        android:id="@+id/button_settings"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_settings"
+        app:layout_constraintTop_toTopOf="@id/view_header_background"
+        app:layout_constraintBottom_toBottomOf="@id/view_header_background"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/button_main_bottom"
-        android:layout_width="428dp"
-        android:layout_height="142dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/boox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_main_top"
-        app:layout_constraintVertical_bias="0.061" />
+    <!-- TODO: 토글 스위치를 Switch나 SwitchCompat로 구현하는 것 고려 -->
+    <!-- 중앙 토글 박스 -->
+
+    <!-- TODO: 체크 상태 관리를 위한 StateListDrawable 사용 고려 -->
+    <!-- 체크 아이콘 (토글 ON 상태 표시) -->
+
+
+    <!-- TODO: 하단 영역을 별도 layout으로 분리하여 재사용성 향상 -->
+    <!-- 하단 배경 웨이브 -->
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="103dp"
-        android:layout_height="95dp"
-
+        android:id="@+id/image_toggle_box"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view8"
-        app:layout_constraintVertical_bias="0.858"
-        app:srcCompat="@drawable/_2025_11_16_152228_removebg_preview__1_" />
+        app:layout_constraintTop_toBottomOf="@id/view_header_background"
+        app:layout_constraintVertical_bias="0.697"
+        app:srcCompat="@drawable/box" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="441dp"
-        android:layout_height="155dp"
+        android:id="@+id/image_toggle_box2"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_header_background"
+        app:layout_constraintVertical_bias="0.394"
+        app:srcCompat="@drawable/box" />
+
+    <!-- TODO: FloatingActionButton 사용 고려 (Material Design 준수) -->
+    <!-- 하단 중앙 알람 버튼 -->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="422dp"
+        android:layout_height="112dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/_2025_11_16_153612_removebg_preview" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/button_alarm"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:clickable="true"
+        android:contentDescription="@string/alarm_button"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123"
-        app:srcCompat="@drawable/box" />
+        app:layout_constraintTop_toTopOf="@+id/view_header_background"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/_2025_11_16_152228_removebg_preview__1_" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView"
+        android:layout_width="330dp"
+        android:layout_height="124dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216"
+        app:srcCompat="@drawable/_2025_12_21_143910" />
+
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view8"
-        app:layout_constraintVertical_bias="0.285"
-        app:srcCompat="@drawable/box" />
+        android:background="#00FFFFFF"
+        android:text="집 안전 점검"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_toggle_box"
+        app:layout_constraintEnd_toEndOf="@+id/image_toggle_box"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="@+id/image_toggle_box"
+        app:layout_constraintTop_toTopOf="@+id/image_toggle_box"
+        app:layout_constraintVertical_bias="0.495" />
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="건강 상태 측정"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_toggle_box2"
+        app:layout_constraintEnd_toEndOf="@+id/image_toggle_box2"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="@+id/image_toggle_box2"
+        app:layout_constraintTop_toTopOf="@+id/image_toggle_box2"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보호자와 연락"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <!-- TODO: 다음 기능 추가 고려 -->
+    <!-- 1. 토글 애니메이션 (슬라이드 효과) -->
+    <!-- 2. 알람 설정 다이얼로그 -->
+    <!-- 3. 설정 화면 전환 -->
+    <!-- 4. 상태 저장 (SharedPreferences) -->
+    <!-- 5. 다크 모드 지원 -->
+
+    <!-- TODO: strings.xml에 추가할 문자열 -->
+    <!--
+    <string name="settings_button">설정</string>
+    <string name="toggle_switch">토글 스위치</string>
+    <string name="toggle_checked">활성화됨</string>
+    <string name="bottom_decoration">하단 장식</string>
+    <string name="alarm_button">알람 설정</string>
+    -->
+
+    <!-- TODO: dimens.xml에 추가할 치수 -->
+    <!--
+    <dimen name="header_height">100dp</dimen>
+    <dimen name="toggle_height">140dp</dimen>
+    <dimen name="button_size">56dp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
